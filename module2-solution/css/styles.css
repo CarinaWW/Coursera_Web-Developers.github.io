@@ -37,6 +37,7 @@ h1 {
 #box3 {
   /*background-color: gray;*/
   border: 1px solid black;
+  font-size:125%;
   padding: 5px;
   width: 100px;
   height: 30px;
