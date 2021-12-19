@@ -97,11 +97,15 @@ function buildAndShowHomeHTML (categories) {
   $ajaxUtils.sendGetRequest(
     homeHtmlUrl,
     function (homeHtml) {
-      var chooseRandomCategory(categories) = chooseRandomCategory(categories);
-      chosenCategoryShortName = chosenCategoryShortName.short_name;
-    var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml ,"randomCategoryShortName",chosenCategoryShortName);
+      var chosenCategoryShortName = 
+      chooseRandomCategory(categories);
+     chosenCategoryShortName= chosenCategoryShortName.short_name; 
+   var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml ,"randomCategoryShortName",chosenCategoryShortName);
+      
+  insertHtml("#main-content", homeHtmlToInsertIntoMainPage );
 
-  insertHtml("main-content",homeHtmlToInsertIntoMainPage);
+      
+
       // TODO: STEP 2: Here, call chooseRandomCategory, passing it retrieved 'categories'
       // Pay attention to what type of data that function returns vs what the chosenCategoryShortName
       // variable's name implies it expects.
@@ -242,13 +246,13 @@ function buildAndShowMenuItemsHTML (categoryMenuItems) {
     false);
 }
 
-
+//var name = "" + categories[i].name;
 // Using category and menu items data and snippets html
 // build menu items view HTML to be inserted into page
 function buildMenuItemsViewHtml(categoryMenuItems,
                                 menuItemsTitleHtml,
                                 menuItemHtml) {
-
+ 
   menuItemsTitleHtml =
     insertProperty(menuItemsTitleHtml,
                    "name",
